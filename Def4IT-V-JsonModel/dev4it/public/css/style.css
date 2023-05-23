@@ -1,0 +1,43 @@
+.variables {
+  --color-variable: purple;
+}
+
+.encabezado {
+  font-size: 35px;
+  color: var(--color-variable);
+  font-family: "Kolker Brush", cursive;
+}
+
+/*Logo*/
+.logo {
+  max-width: 100px;
+  animation: aumentar 1000ms linear 2 alternate;
+}
+@keyframes aumentar {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+/*Avatar*/
+.avatar {
+  max-width: 100px;
+}
+
+/* Buscadores de la navBar */
+.navForm {
+  margin-right: 10px;
+}
+
+/* Botonera de formularios de edición */
+.buttonPanel {
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+}

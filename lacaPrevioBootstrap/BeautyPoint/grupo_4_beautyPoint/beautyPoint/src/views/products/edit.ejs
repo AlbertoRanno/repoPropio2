@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs', {title: "Editando producto:" + product.id
+  })%>
+
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <main class="register-main">
+      <form
+        action="/products/edit/<%= product.id %>?_method=PUT"
+        method="POST"
+        class="form-register"
+        enctype="multipart/form-data"
+      >
+        <h1>Editando producto: <%= product.id %></h1>
+
+        <div class="form-element">
+          <label for="name">Nombre de producto:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value="<%= product.name %>"
+          />
+          <% if (locals.errors && errors.name) { %>
+          <span class="feedback"> <%= errors.name.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="price">Precio:</label>
+          <input
+            type="number"
+            name="price"
+            id="price"
+            value="<%= product.price %>"
+          />
+          <% if (locals.errors && errors.price) { %>
+          <span class="feedback"> <%= errors.price.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="description">Descripción del producto:</label>
+          <textarea name="description" id="description" cols="30" rows="10">
+          <%= product.description %></textarea
+          >
+          <% if (locals.errors && errors.description) { %>
+          <span class="feedback"> <%= errors.description.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="package">Package:</label>
+          <select name="package" id="package">
+            <% for( let i = 0; i < package.length; i++ ) { %>
+            <!-- si el package que estoy por imprimir es la mismo que ya tiene el producto:-->
+            <% if (package[i].id == product.package_id) { %>
+            <option value="<%= package[i].id %> " selected>
+              <%= package[i].description %>
+            </option>
+            <% } else { %>
+            <option value="<%= package[i].id %> ">
+              <%= package[i].description %>
+            </option>
+            <% } %> <% } %>
+          </select>
+        </div>
+
+        <div class="form-element">
+          <label for="image">Imagen Producto:</label>
+          <input type="file" id="image" name="image" />
+          <% if (locals.errors && errors.image) { %>
+          <span class="feedback"> <%= errors.image.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="category">Categoría:</label>
+          <select name="category" id="category">
+            <% for( let i = 0; i < category.length; i++ ) { %>
+            <!-- si la categoria que estoy por imprimir es la misma que ya tiene el producto:-->
+            <% if (category[i].id == product.category_id) { %>
+            <option value="<%= category[i].id %> " selected>
+              <%= category[i].description %>
+            </option>
+            <% } else { %>
+            <option value="<%= category[i].id %> ">
+              <%= category[i].description %>
+            </option>
+            <% } %> <% } %>
+          </select>
+        </div>
+
+        <div class="form-element">
+          <div class="form-botonera">
+            <% if (locals.userLogged && locals.userLogged.categoria===0) { %>
+            <button type="submit" value="updetear" class="form-boton">
+              Guardar cambios
+            </button>
+            <% } %>
+            <button type="reset" value="cancelar" class="form-boton">
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <%- include('../partials/footer.ejs')%>
+  </body>
+</html>

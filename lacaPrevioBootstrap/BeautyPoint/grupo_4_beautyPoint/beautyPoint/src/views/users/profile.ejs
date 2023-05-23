@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs', {title: "Profile"})%>
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <main class="home-main">
+      <h1>Estas en Profile</h1>
+      <h2>Hola <%= user.first_name %></h2>
+      <img
+        src="<%= user.avatar %>  "
+        alt="<%= user.first_name %>"
+        class="profile-image"
+      />
+      <h2><%= user.email %></h2>
+
+      <button type="submit" class="action-button delete">
+        <a href="/users/edit/<%= user.id %>" class="action-button edit"
+          >Editar datos Personales</a>
+      </button>
+    </main>
+  </body>
+  <%- include('../partials/footer') %>
+</html>

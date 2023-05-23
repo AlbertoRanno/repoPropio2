@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1><%= pelicula.Title %></h1>
+    <select>
+      <% provinces.provincias.forEach(provincia => { %>
+      <!-- por lo gral, sería como siempre, y hubiese bastado con 
+    pasar "provinces". Pero es importante leer primero como viene la info de la API que consumimos, dado que en 
+  este caso, las provincias, están dentro de una propiedad "provincias", en el json que nos proveen-->
+      <option><%= provincia.nombre %></option>
+      <% }) %>
+    </select>
+  </body>
+</html>

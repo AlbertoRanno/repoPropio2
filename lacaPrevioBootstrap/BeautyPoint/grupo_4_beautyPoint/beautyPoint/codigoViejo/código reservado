@@ -1,0 +1,65 @@
+    //  ctrl + k    luego   ctrl + c
+    //  ctrl + u para descomentaar
+  
+ /*
+            <option value="categoria-1" <%= locals.oldData && oldData.category === "categoria-1" ? "selected" : " " ; %>>Cuidados básicos</option>
+            <option value="categoria-2" <%= locals.oldData && oldData.category === "categoria-2" ? "selected" : " " ; %>>Antiage</option>
+            <option value="categoria-3" <%= locals.oldData && oldData.category === "categoria-3" ? "selected" : " " ; %>>Solares</option>
+            <option value="categoria-4" <%= locals.oldData && oldData.category === "categoria-4" ? "selected" : " " ; %>>Maquillaje</option>
+ 
+ <select name="category" id="product_category" required>
+          <option value="categoria-1" <%= (products.category == "categoria-1") ? "selected" : "";%>>Cuidados básicos
+          </option>
+          <option value="categoria-2" <%= (products.category == "categoria-2") ? "selected" : "";%>>Antiage</option>
+          <option value="categoria-3" <%= (products.category == "categoria-3") ? "selected" : "";%>>Solares</option>
+          <option value="categoria-4" <%= (products.category == "categoria-4") ? "selected" : "";%>>Maquillaje</option>
+        </select>
+        <span class="feedback"></span>*/
+/*
+
+      search: (req, res) => {
+    let loQueBuscoElUsuario = req.query.keywords.toLowerCase();
+    let products = productsModel.readJsonFile();
+    console.log(loQueBuscoElUsuario);
+    let productsResults = [];
+    for (let i = 0; i < products.length; i++) {
+      console.log("entró al FOR");
+      if (products[i].name.toLowerCase().includes(loQueBuscoElUsuario)) {
+        productsResults.push(products[i]);
+      }
+    }
+    res.status(200).render("results", {
+      productsResults,
+      toThousand,
+    });
+  }
+ 
+ 
+ 
+ router.get("/pruebaSession", function (req, res) {
+    if (req.session.numeroVisitas === undefined) {
+      req.session.numeroVisitas = 0; //si no existe lo inica en 0
+    }
+    req.session.numeroVisitas++;
+    res.send("Session tiene el nro: " + req.session.numeroVisitas);
+  });
+router.get("/mostrarNumeroSession", function (req, res) {
+  res.send("Session tiene el nro: " + req.session.numeroVisitas);
+});
+
+const bcryptjs = require("bcryptjs");
+
+let hash = bcryptjs.hashSync("abc123", 10); // encripta el texto con el agregado de sal (+ encriptado), siempre "10"
+console.log(hash);
+console.log(bcryptjs.compareSync("abc123", hash));
+// compara encriptado con texto plano (el texto "hash" debe haber sido encriptado previamente)
+
+//Testing the connection sequelize
+try {
+  await sequelize.authenticate();
+  console.log("Connection has been established successfully.");
+} catch (error) {
+  console.error("Unable to connect to the database:", error);
+}
+
+*/

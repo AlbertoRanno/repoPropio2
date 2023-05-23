@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/head.ejs', {title: "Encontrá eso que Querés"})%>
+
+<body>
+  <%- include('partials/header.ejs')%>
+  <main class="home-main">
+    <ul>
+      <% for( let i = 0; i < categories.length; i++ ) { %>
+      <li>
+        <div class="home-banners">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/5e7c10d0cc95f518282dbf0c/1587665808500-FZO4SCXWMMSP5BNMOK1E/apm-dibi-pure-equalizer-line-banner.jpg"
+            alt="rostro de mujer" />
+          <h2><a href="#"><%= categories[i].description %></a></h2>
+        </div>
+        <ul>      
+          <section>
+            <article class="home-products">
+              <% for( let j = 0; j < categories[i].productosC.length; j++ ) { %>
+              <div class="home-contenedor">
+                <% if (categories[i].productosC[j].status != 0) { %>
+                <a href="/products/detail/<%= categories[i].productosC[j].id%>">
+                <img src="<%= categories[i].productosC[j].image%> " alt=<%=categories[i].productosC[j].name%> /></a>
+                <div><%= categories[i].productosC[j].name%></div>
+                <div class=" home-price">
+                  $ <%= toThousand(categories[i].productosC[j].price) %>
+              </div>
+              </div>
+              <% } %>
+              <% } %>
+            </article>
+          </section>          
+        </ul>
+      </li>
+      <% } %>
+    </ul>
+  </main>
+  <%- include('partials/footer.ejs')%>
+</body>
+
+</html>

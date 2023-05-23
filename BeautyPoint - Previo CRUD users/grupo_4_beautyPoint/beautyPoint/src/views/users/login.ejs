@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs', {title: "Iniciá Sesión"})%>
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <main class="login-main">
+      <form action="/users/login" method="POST" class="form-login">
+        <div class="form-element-login">
+          <label for="email">Email</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Correo electrónico"
+            id="email"
+            class="<%= (locals.errors && errors.email) ? 'is-invalid' : null %>"
+            value="<%= (locals.oldData) ? oldData.email : null %>"
+          />
+          <% if (locals.errors && errors.email) { %>
+          <span class="feedback"> <%= errors.email.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element-login">
+          <label for="password">Contraseña</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Contraseña"
+            class="<%= (locals.errors && errors.password) ? 'is-invalid' : null %>"
+          />
+          <% if (locals.errors && errors.password) { %>
+          <span class="feedback"> <%= errors.password.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element-login">
+          <button type="submit" class="form-boton" value="login">
+            Iniciar Sesión
+          </button>
+        </div>
+
+        <div class="form-element-login">
+          <div class="login-remember">
+            <label for="rememberUser">Recordar usuario y contraseña</label>
+            <input type="checkbox" id="rememberUser" name="rememberUser" />
+          </div>
+        </div>
+
+        <div class="form-element-login">
+          <a href="#" class="login-forgot-password"
+            >¿Olvidaste la contraseña?</a
+          >
+        </div>
+        <div class="form-element-login">
+          <a href="#" class="login-create-account">Crear una cuenta</a>
+        </div>
+      </form>
+    </main>
+    <%- include('../partials/footer.ejs')%>
+  </body>
+</html>

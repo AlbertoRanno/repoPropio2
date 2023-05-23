@@ -1,0 +1,14 @@
+*Vistas:
+- Not Found
+
+*Observaciones:
+- Tremenda contra de estas bases JSON, es que no hay vínculos, por ej. los proyectos de las personas no se actualizan
+
+*Dudas puntuales:
+- sigue siendo necesario methodOverride?? los navegadores aun no consideran put/delete/.. ? .. ya murió "e"..
+
+*Dudas conceptuales:
+- Bases de Datos Documentales =(
+
+*A implementar en beautyPoint:
+-delete req.body.repeatPassword; // en el register, para que directamente no se guarde

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs', {title: " - Personal" })%>
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <main>
+      <ul class="list-group">
+        <!--active / disabled-->
+        <% for( let i = 0; i < listado.length; i++ ) { %>
+        <li>
+          <a
+            href="/personal/detail/<%= listado[i].id %>"
+            class="list-group-item list-group-item-action"
+            ><%= listado[i].name %>
+          </a>
+        </li>
+        <% } %>
+      </ul>
+
+      <br />
+      <br />
+
+      <div class="buttonPanel">
+        <form action="/" method="GET">
+          <button type="submit" class="btn btn-primary">Volver</button>
+        </form>
+        <form action="/personal/register" method="GET">
+          <button type="submit" class="btn btn-success">Nuevo usuario</button>
+        </form>
+      </div>
+
+    </main>
+  </body>
+</html>

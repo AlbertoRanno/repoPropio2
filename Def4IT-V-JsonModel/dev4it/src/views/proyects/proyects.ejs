@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs', {title: "" })%>
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <ul class="list-group">
+      <% for( let i = 0; i < listado.length; i++ ) { %>
+      <li>
+        <a
+          href="/proyectos/detail/<%= listado[i].id %>"
+          class="list-group-item list-group-item-action"
+          ><%= listado[i].name %></a
+        >
+      </li>
+      <% } %>
+    </ul>
+
+    <br />
+    <br />
+
+    <div class="buttonPanel">
+      <form action="/" method="GET">
+        <button type="submit" class="btn btn-primary">Volver</button>
+      </form>
+      <form action="/proyectos/register" method="GET">
+        <button type="submit" class="btn btn-success">Nuevo proyecto</button>
+      </form>
+    </div>
+    
+  </body>
+</html>

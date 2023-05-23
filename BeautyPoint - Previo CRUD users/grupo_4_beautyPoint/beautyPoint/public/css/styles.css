@@ -1,0 +1,380 @@
+* {
+  box-sizing: border-box;
+}
+.not-found {
+  background-image: url("../images/404-error.jpg");
+  background-size: cover;
+  background-repeat:no-repeat;
+ 
+}
+input:invalid:required {
+  border: solid 2px red;
+}
+
+input:valid:required {
+  background-color: white;
+}
+
+.login-forgot-password,
+.login-create-account {
+  text-decoration: none;
+}
+
+/* Estilos para formularios de login.html y registro.html */
+.form-login,
+.form-register {
+  padding: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.form-element {
+  margin: 5px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+}
+
+.form-element-login {
+  /* border: dotted 2px red; */
+  margin: 5px auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 70vw;
+}
+
+.form-element-login input {
+  width: 100%;
+}
+
+/* #checkbox-login */
+
+.login-remember {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.form-register h1 {
+  font-weight: 200;
+  font-size: 30px;
+  text-align: center;
+}
+
+.form-element label {
+  font-weight: 400;
+  font-size: 20px;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+#label-radiobutton {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.form-botonera {
+  width: 100%;
+  padding: 8px 8px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.form-boton {
+  background-color: #3cc3b2;
+  color: #ffffff;
+  font-size: 20px;
+  padding: 5px 10px;
+  margin: 5px;
+  width: 50%;
+}
+
+/*Header*/
+.logo {
+  max-width: 100px;
+  animation: aumentar 1000ms linear 2 alternate;
+}
+@keyframes aumentar {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: rotateY(90deg);
+  }
+  100% {
+    transform: scale(1.5);
+  }
+}
+
+/*
+.respmenu a {
+  text-decoration: none;
+  display: block;
+  padding: 10px 20px;
+  max-width: 200px;
+  background: #3cc3b2;
+  color: black;
+}
+.respmenu input[type="checkbox"],
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  position: absolute;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  right: 0;
+  top: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.respmenu .fa-bars,
+.respmenu .fa-times {
+  font-size: 48px;
+  pointer-events: none;
+}
+
+.respmenu input[type="checkbox"] {
+  opacity: 0;
+}
+
+.respmenu {
+  color: white;
+  position: relative;
+  background: #3cc3b2;
+  min-height: 48px;
+  width: 40%;
+}
+.respmenu ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.respmenu nav {
+  display: none;
+}
+
+.respmenu input:checked ~ nav {
+  display: block;
+}
+
+.respmenu input:checked ~ .fa-bars {
+  display: none;
+}
+
+.respmenu input:not(:checked) ~ .fa-times {
+  display: none;
+}
+*/
+
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: LightCyan;
+}
+
+.header-elements ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+}
+.header-elements a:link,
+.header-elements a:visited,
+.header-elements a:hover,
+.header-elements a:active {
+  text-decoration: none;
+}
+
+.header-elements section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header-elements-ang {
+  width: 30%;
+}
+.header-cart {
+  font-size: 250%;
+  transition: all 1s;
+}
+.header-cart:hover {
+  font-size: 350%;
+}
+
+.header-cart i {
+  color: #3cc3b2;
+}
+.header-hamburguer-button {
+  background-color: #3cc3b2;
+  color: white;
+  font-size: 300%;
+  border-radius: 10%;
+  transition: all 1s;
+}
+.header-hamburguer-button:hover {
+  font-size: 400%;
+  border-radius: 30%;
+}
+.input-father {
+  position: relative;
+  margin: 15px auto;
+  width: 70vw;
+  flex-grow: 1;
+}
+.input {
+  color: #191919;
+  padding: 15px 15px 15px 35px;
+  width: 100%;
+  text-align: left;
+}
+.input-icon {
+  color: #191919;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+/*.header-nav {
+  display: none;
+}*/
+
+/*index*/
+.cart-main,
+.register-main,
+.login-main {
+  margin-top: 280px;
+  margin-bottom: 140px;
+}
+
+/*Footer*/
+.logo-footer {
+  width: 20vw;
+  margin: 0;
+}
+.footer-father {
+  position: relative;
+}
+.footer {
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: black;
+  color: white;
+  font-size: 10px;
+  display: flex;
+  align-items: top;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-elements {
+  text-align: center;
+  padding: 10px;
+  width: 33%;
+}
+.footer-copyright {
+  flex-grow: 1;
+  padding: 10px;
+}
+
+.footer-redes-sociales {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 10vw;
+}
+.footer-redes-sociales a {
+  color: white;
+  text-decoration: none;
+}
+
+@media (min-width: 768px) {
+  /*Footer*/
+  .footer {
+    font-size: 20px;
+  }
+  .footer-redes-sociales {
+    flex-grow: 1;
+  }
+  .footer-redes-sociales a {
+    font-size: large;
+  }
+  .footer-us {
+    width: 45%;
+  }
+  .footer-logo {
+    width: 20%;
+  }
+
+  /*Header*/
+  .header-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .header-nav a {
+    text-decoration: none;
+    color: black;
+    font-size: large;
+  }
+  .header-nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .header-nav li {
+    margin: 0 5px;
+  }
+  .respmenu {
+    display: none;
+  }
+  .header-nav-left {
+    padding: 0 5px;
+    max-width: 50%;
+  }
+  .header-nav-right {
+    padding: 0 5px;
+    max-width: 50%;
+  }
+  .input-father {
+    flex-grow: 0;
+    width: 35vw;
+  }
+  .header-search {
+    order: -1;
+    width: 40%;
+  }
+  .header-logo {
+    order: -2;
+  }
+}
+
+@media (min-width: 1280px) {
+}
+
+

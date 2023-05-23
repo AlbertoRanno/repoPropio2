@@ -1,0 +1,173 @@
+    //  ctrl + k    luego   ctrl + c
+    //  ctrl + u para descomentaar
+
+
+ processRegister: (req, res) => {
+    //res.send({ body: req.body, file: req.file });
+    const resultValidation = validationResult(req); // esta variable es un objeto con varias propiedades, una de ellas es is Empty
+    //res.send(resultValidation);
+    //res.send(resultValidation.mapped());
+    //res.send(resultValidation.errors.length > 0)
+    //Antes de hacer la creación, verificar que el usuario no haya sido cargado previamente:
+    
+    let userInDB = usersModel.filtrarPorCampoValor("email", req.body.email);
+    console.log(userInDB);
+    if (userInDB.length >= 1) {
+      res.render("users/register", {
+        errors: { email: { msg: "Un usuario ya se registró con este mail" } },
+        oldData: req.body,
+      });
+    } else if (resultValidation.isEmpty()) {
+      console.log("Entró al método processRegister del usersController.js");
+      console.log(req.file);
+
+      //Ahora piso las propiedades password e image:
+      (req.body.password = bcrypt.hashSync(req.body.password, 10)), // encripto password con la librería bcryptjs
+        //el ", 10" es la cantidad de "sal", un dato añadido que hace que los hash sean mucho más difíciles de romper. Para contraseñas se suele usar 10 o 12
+        (req.body.image = "/images/avatars/" + req.file.filename);
+
+      let userId = usersModel.save(req.body);
+      console.log(userId);
+      //res.redirect("/users/profile/" + userId);
+      res.redirect("login");
+    } else {
+      //resultValidation es un objeto lit. con la prop. errors, hay elementos en errors?
+      res.render("users/register", {
+        errors: resultValidation.mapped(), // envío los errores como un obj. lit. para que sea + facil trabajarlo
+        oldData: req.body, // envío los datos anteriores a la vista, para que no tengan que volver a cargar todo
+      });
+    }
+    //return res.send("Ok, las validaciones se pasaron, no hay errores");
+  }
+    login: (req, res) => {
+    console.log(req.cookies); //obj. lit. "cookies" - trae todas las cookies del navegador
+    return res.status(200).render("users/login");
+  }
+  processLogin: (req, res) => {
+    let usersToLogin = usersModel.filtrarPorCampoValor("email", req.body.email);
+    //devuelve el objeto usuario a loguearse, dentro de un array
+    let userToLogin = usersToLogin[0];
+    //devuelve el objeto usuario en sí
+
+    if (userToLogin) {
+      // si el mail existe en mi base de datos, compara las contraseñas
+      let isOkThePassword = bcrypt.compareSync(
+        req.body.password,
+        userToLogin.password
+      );
+
+      if (isOkThePassword) {
+        // si el password tmb está ok, permite el ingreso
+        //quiero guardar al usuario en session. Pero no me interesa, y es más seguro, eliminar antes el password.
+        delete userToLogin.password;
+        req.session.userLogged = userToLogin;
+        //ahora el obj session, tiene otra propiedad: userLogged (además de cookie), que guarda toda la info de userToLogin
+
+        //cuando ya tengo los datos de la persona a loguear, pregunto si tmb viajó el rememberUser:
+        if (req.body.rememberUser) {
+          // si viajó, quiero que la cookie se llame userEmail y guarde el email, * 1 seg * 60 * 60 = 1 hora
+          res.cookie("userEmail", req.body.email, {
+            maxAge: 1000 * 60 * 60,
+          });
+        }
+
+        return res.redirect("/users/profile/" + userToLogin.id);
+      }
+      return res.render("users/login", {
+        // si el password no está ok
+        errors: {
+          email: {
+            msg: "Las credenciales son inválidas",
+          },
+        },
+      });
+    }
+
+    return res.render("users/login", {
+      // si el mail no está ok
+      errors: {
+        email: {
+          msg: "No se encuentra este email en nuestra base de datos",
+        },
+      },
+    });
+  }
+  profile: (req, res) => {
+    console.log("Entrando a Profile");
+    console.log(req.session);
+    console.log(req.cookies.userEmail); // si, No tildé recordar, saldrá undefined, porque no se grabó niguna cookie
+    //si tildó recordar, veré el mail con el que se logueó, el cual usaré para loguear a la persona automáticamente
+    res.render("users/profile", {
+      user: req.session.userLogged, // le comparto la info a la vista
+    });
+  }
+  logout: (req, res) => {
+    res.clearCookie("userEmail"); // borra la cookie, sino, mientras dure esta, estoy en un bucle, y no puedo desloguearme
+    req.session.destroy(); // directamente borra todo lo que está en session
+    console.log(req.session);
+    return res.redirect("/");
+  }
+
+  
+ /*
+            <option value="categoria-1" <%= locals.oldData && oldData.category === "categoria-1" ? "selected" : " " ; %>>Cuidados básicos</option>
+            <option value="categoria-2" <%= locals.oldData && oldData.category === "categoria-2" ? "selected" : " " ; %>>Antiage</option>
+            <option value="categoria-3" <%= locals.oldData && oldData.category === "categoria-3" ? "selected" : " " ; %>>Solares</option>
+            <option value="categoria-4" <%= locals.oldData && oldData.category === "categoria-4" ? "selected" : " " ; %>>Maquillaje</option>
+ 
+ <select name="category" id="product_category" required>
+          <option value="categoria-1" <%= (products.category == "categoria-1") ? "selected" : "";%>>Cuidados básicos
+          </option>
+          <option value="categoria-2" <%= (products.category == "categoria-2") ? "selected" : "";%>>Antiage</option>
+          <option value="categoria-3" <%= (products.category == "categoria-3") ? "selected" : "";%>>Solares</option>
+          <option value="categoria-4" <%= (products.category == "categoria-4") ? "selected" : "";%>>Maquillaje</option>
+        </select>
+        <span class="feedback"></span>*/
+/*
+
+      search: (req, res) => {
+    let loQueBuscoElUsuario = req.query.keywords.toLowerCase();
+    let products = productsModel.readJsonFile();
+    console.log(loQueBuscoElUsuario);
+    let productsResults = [];
+    for (let i = 0; i < products.length; i++) {
+      console.log("entró al FOR");
+      if (products[i].name.toLowerCase().includes(loQueBuscoElUsuario)) {
+        productsResults.push(products[i]);
+      }
+    }
+    res.status(200).render("results", {
+      productsResults,
+      toThousand,
+    });
+  }
+ 
+ 
+ 
+ router.get("/pruebaSession", function (req, res) {
+    if (req.session.numeroVisitas === undefined) {
+      req.session.numeroVisitas = 0; //si no existe lo inica en 0
+    }
+    req.session.numeroVisitas++;
+    res.send("Session tiene el nro: " + req.session.numeroVisitas);
+  });
+router.get("/mostrarNumeroSession", function (req, res) {
+  res.send("Session tiene el nro: " + req.session.numeroVisitas);
+});
+
+const bcryptjs = require("bcryptjs");
+
+let hash = bcryptjs.hashSync("abc123", 10); // encripta el texto con el agregado de sal (+ encriptado), siempre "10"
+console.log(hash);
+console.log(bcryptjs.compareSync("abc123", hash));
+// compara encriptado con texto plano (el texto "hash" debe haber sido encriptado previamente)
+
+//Testing the connection sequelize
+try {
+  await sequelize.authenticate();
+  console.log("Connection has been established successfully.");
+} catch (error) {
+  console.error("Unable to connect to the database:", error);
+}
+
+*/

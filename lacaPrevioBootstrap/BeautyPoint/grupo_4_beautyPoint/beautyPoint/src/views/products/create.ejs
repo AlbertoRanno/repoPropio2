@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('../partials/head.ejs', {title: "Creando " })%>
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <main class="register-main">
+      <form
+        action="/products/create/"
+        method="POST"
+        class="form-register"
+        enctype="multipart/form-data"
+      >
+        <h1>Crear producto</h1>
+
+        <div class="form-element">
+          <label for="name">Nombre de producto:</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ingresá el título del producto"
+            class="<%= (locals.errors && errors.name) ? 'is-invalid' : null %>"
+            value="<%= (locals.oldData) ? oldData.name : null %>"
+          />
+          <% if (locals.errors && errors.name) { %>
+          <span class="feedback"> <%= errors.name.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="price">Precio:</label>
+          <input
+            type="number"
+            name="price"
+            id="price"
+            placeholder="Ingresá el precio del producto"
+            class="<%= (locals.errors && errors.price) ? 'is-invalid' : null %>"
+            value="<%= (locals.oldData) ? oldData.price : null %>"
+          />
+          <% if (locals.errors && errors.price) { %>
+          <span class="feedback"> <%= errors.price.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="description">Descripción del producto:</label>
+          <textarea
+            name="description"
+            id="description"
+            cols="30"
+            rows="10"
+            placeholder="Ingresá la presentación del producto"
+            class="<%= (locals.errors && errors.description) ? 'is-invalid' : null %>"
+          ><%= (locals.oldData) ? oldData.description : null %></textarea>
+          <% if (locals.errors && errors.description) { %>
+          <span class="feedback"> <%= errors.description.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="image">Imagen Producto:</label>
+          <input type="file" id="image" name="image" accept=".jpg, .png" />
+          <% if (locals.errors && errors.image) { %>
+          <span class="feedback"> <%= errors.image.msg %> </span>
+          <% } %>
+          
+        <div class="form-element">
+          <label for="package">Package:</label>
+          <select name="package" id="package">
+            <% for( let i = 0; i < packages.length; i++ ) { %>
+            <option value=" <%= packages[i].id %>  ">
+              <%= packages[i].description %>
+            </option>
+            <% } %>
+          </select>
+          <% if (locals.errors && errors.category) { %>
+          <span class="feedback"> <%= errors.category.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="category">Categoría:</label>
+          <select name="category" id="category">
+            <% for( let i = 0; i < categories.length; i++ ) { %>
+            <option value=" <%= categories[i].id %>  ">
+              <%= categories[i].description %>
+            </option>
+            <% } %>
+          </select>
+          <% if (locals.errors && errors.category) { %>
+          <span class="feedback"> <%= errors.category.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <div class="form-botonera">
+            <% if (locals.userLogged && locals.userLogged.categoria===0) { %>
+            <button type="submit" value="product_create" class="form-boton">
+              Crear producto
+            </button>
+            <% } %>
+            <button type="reset" value="cancelar" class="form-boton">
+              Cancelar
+            </button>
+          </div>
+        </div>
+      </form>
+    </main>
+    <%- include('../partials/footer.ejs')%>
+  </body>
+</html>

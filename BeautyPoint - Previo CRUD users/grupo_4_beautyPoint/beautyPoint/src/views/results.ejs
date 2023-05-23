@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<%- include('partials/head', {title: 'Resultados de tu búsqueda'}) %>
+
+<body>
+  <%- include('partials/header.ejs')%>
+  <main class="home-main">
+    <div class="home-banners">
+      <h2>Resultados de la búsqueda:</h2>
+    </div>
+    <section>
+      <article class="home-products">
+        <% for (let i = 0; i < productsResults.length; i++) { %>
+        <div class="home-contenedor">
+          <% if (productsResults[i].status != 0) { %>                    
+          <a href="/products/detail/<%= productsResults[i].id%>"><img src=<%= productsResults[i].image%>
+              alt=<%= productsResults[i].name%> /></a>
+          <div><%= productsResults[i].name%></div>
+          <div class="home-price">$ <%= toThousand(productsResults[i].price) %></div>
+        </div>
+        <% } %>
+        <% } %>
+      </article>
+      <% if (productsResults.length == 0) { %>
+      <div class="col-12">
+        <h2 class="products-title" style="color: cyan">
+          No hay productos que coincidan con esa búsqueda
+        </h2>
+      </div>
+      <% } %>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+
+</html>

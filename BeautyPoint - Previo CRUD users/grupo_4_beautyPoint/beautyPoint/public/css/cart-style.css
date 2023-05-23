@@ -1,0 +1,54 @@
+/*cart main*/
+.carrito-HeaderCompras {
+  color: rgba(0, 0, 0, 0.55);
+}
+.carrito-Trash {
+  color: rgba(75, 75, 75, 0.55);
+}
+
+.carrito-Row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.carrito-Row .carrito-Column {
+  width: 20%;
+  text-align: center;
+}
+
+.carrito-ProductImage {
+  width: 40%;
+}
+.cart-table {
+  width: 100%;
+}
+
+@media (min-width: 768px) and (max-width: 1279px) {
+  .carrito-Column.First {
+    width: 60%;
+    text-align: left;
+  }
+}
+
+@media (min-width: 1280px) {
+  .carrito-Column.First {
+    width: 60%;
+    text-align: left;
+  }
+}
+
+.cart-table td h5 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.carrito-Trash button {
+  border: none;
+  color: #3cc3b2;
+  background-color: white;
+}
+
+.carrito-Column input {
+  max-width: 3em;
+}
+/*/cart main*/

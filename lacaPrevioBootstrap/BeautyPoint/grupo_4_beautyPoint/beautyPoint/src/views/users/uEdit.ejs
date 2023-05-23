@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+  <%- include('../partials/head.ejs', {title: "Edición de Perfil"})%>
+  <body>
+    <%- include('../partials/header.ejs')%>
+    <main class="home-main">
+      <form
+        action="/users/edit/<%= user.id %>?_method=PUT"
+        method="POST"
+        class="form-register"
+        enctype="multipart/form-data"
+      >
+        <h1>
+          <%= user.first_name %> bienvenido, acá usted podrá modificar los datos
+          registrados
+        </h1>
+
+        <div class="form-element">
+          <label for="first_name">Nombres:</label>
+          <input
+            type="text"
+            id="first_name"
+            name="first_name"
+            value="<%= user.first_name %>"
+          />
+          <% if (locals.errors && errors.first_name) { %>
+          <span class="feedback"> <%= errors.first_name.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="last_name">Apellidos:</label>
+          <input
+            type="text"
+            id="last_name"
+            name="last_name"
+            value="<%= user.last_name %>"
+          />
+          <% if (locals.errors && errors.last_name) { %>
+          <span class="feedback"> <%= errors.last_name.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="dni">DNI:</label>
+          <input type="number" name="dni" id="dni" value="<%= user.dni %>" />
+          <% if (locals.errors && errors.dni) { %>
+          <span class="feedback"> <%= errors.dni.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="email">E-mail:</label>
+          <input
+            type="text"
+            name="email"
+            id="email"
+            value="<%= user.email %>"
+          />
+          <% if (locals.errors && errors.email) { %>
+          <span class="feedback"> <%= errors.email.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="image">Imagen de Perfil:</label>
+          <input type="file" id="image" name="image" />
+          <% if (locals.errors && errors.image) { %>
+          <span class="feedback"> <%= errors.image.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <label for="phone">Teléfono:</label>
+          <input
+            type="text"
+            name="phone"
+            id="phone"
+            value="<%= user.phone %>"
+          />
+          <% if (locals.errors && errors.phone) { %>
+          <span class="feedback"> <%= errors.phone.msg %> </span>
+          <% } %>
+        </div>
+
+        <div class="form-element">
+          <div class="form-botonera">
+            <button type="submit" value="updetear" class="form-boton">
+              Guardar cambios
+            </button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </body>
+  <%- include('../partials/footer') %>
+</html>

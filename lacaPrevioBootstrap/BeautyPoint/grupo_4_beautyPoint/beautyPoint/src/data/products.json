@@ -1,0 +1,554 @@
+[
+ {
+  "name": "Serum liposomado",
+  "price": 4959,
+  "description": "vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero",
+  "package": "200",
+  "category": "categoria-3",
+  "id": 1,
+  "image": "/images/products/product-1652744281958.png",
+  "discount": null
+ },
+ {
+  "name": "Leche de limpieza",
+  "price": 4814,
+  "description": "orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus",
+  "package": 4,
+  "category": "categoria-3",
+  "image": "/images/products/serumDemaq.png",
+  "id": 2,
+  "discount": null
+ },
+ {
+  "name": "Protector Solar FPS 158",
+  "price": 2900,
+  "description": "        No te quemas NI POR JODA",
+  "package": [
+   "2 ",
+   "2 "
+  ],
+  "id": 3,
+  "image": "/images/products/dermopulidoGel.png",
+  "discount": null
+ },
+ {
+  "name": "Serum liposomado",
+  "price": 4528,
+  "description": "tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus",
+  "package": 43,
+  "category": "categoria-2",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 4,
+  "discount": null
+ },
+ {
+  "name": "Diamond antiage",
+  "price": 1894,
+  "description": "interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis",
+  "package": 21,
+  "category": "categoria-1",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 5,
+  "discount": null
+ },
+ {
+  "name": "Té verde",
+  "price": 4709,
+  "description": "et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi",
+  "package": 15,
+  "category": "categoria-2",
+  "image": "/images/products/retinolPlus.png",
+  "id": 6,
+  "discount": null
+ },
+ {
+  "name": "Filler",
+  "price": 4951,
+  "description": "pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis",
+  "package": 41,
+  "category": "categoria-2",
+  "image": "/images/products/fillerDiamond.png",
+  "id": 7,
+  "discount": null
+ },
+ {
+  "name": "Leche de limpieza con Regaliz",
+  "price": 4629,
+  "description": "primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi",
+  "package": 23,
+  "category": "categoria-4",
+  "image": "/images/products/retinolPlus.png",
+  "id": 8,
+  "discount": null
+ },
+ {
+  "name": "Diamond antiage",
+  "price": 4466,
+  "description": "consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque",
+  "package": 44,
+  "category": "categoria-3",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 9,
+  "discount": null
+ },
+ {
+  "name": "Leche de limpieza con Regaliz",
+  "price": 1839,
+  "description": "viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra magna ac consequat metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci",
+  "package": 9,
+  "category": "categoria-2",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 10,
+  "discount": null
+ },
+ {
+  "name": "Dermopulido",
+  "price": 4717,
+  "description": "tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel",
+  "package": 15,
+  "category": "categoria-4",
+  "image": "/images/products/cremaLimpieza.png",
+  "id": 12,
+  "discount": null
+ },
+ {
+  "name": "Dermopulido",
+  "price": 1665,
+  "description": "vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis",
+  "package": 9,
+  "category": "categoria-3",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 13,
+  "discount": null
+ },
+ {
+  "name": "Serum liposomado",
+  "price": 3660,
+  "description": "ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi",
+  "package": 23,
+  "category": "categoria-4",
+  "image": "/images/products/fillerDiamond.png",
+  "id": 14,
+  "discount": null
+ },
+ {
+  "name": "Loción humectante y tonificante",
+  "price": 1393,
+  "description": "et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum",
+  "package": 42,
+  "category": "categoria-3",
+  "image": "/images/products/dermopulidoGel.png",
+  "id": 15,
+  "discount": null
+ },
+ {
+  "name": "Serum liposomado",
+  "price": 3101,
+  "description": "adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis",
+  "package": 41,
+  "category": "categoria-1",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 16,
+  "discount": null
+ },
+ {
+  "name": "Loción humectante y tonificante",
+  "price": 3056,
+  "description": "feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas",
+  "package": 41,
+  "category": "categoria-1",
+  "image": "/images/products/lecheLimpieza.png",
+  "id": 18,
+  "discount": null
+ },
+ {
+  "name": "Diamond antiage",
+  "price": 1752,
+  "description": "ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue",
+  "package": 41,
+  "category": "categoria-1",
+  "image": "/images/products/cremaLimpieza.png",
+  "id": 19,
+  "discount": null
+ },
+ {
+  "name": "Serum liposomado",
+  "price": 3667,
+  "description": "non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet",
+  "package": 26,
+  "category": "categoria-1",
+  "image": "/images/products/lecheLimpieza.png",
+  "id": 20,
+  "discount": null
+ },
+ {
+  "name": "Filler",
+  "price": 2481,
+  "description": "eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum",
+  "package": 16,
+  "category": "categoria-2",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 21,
+  "discount": null
+ },
+ {
+  "name": "Crema de limpieza",
+  "price": 1905,
+  "description": "accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris",
+  "package": 45,
+  "category": "categoria-4",
+  "image": "/images/products/serumDemaq.png",
+  "id": 22,
+  "discount": null
+ },
+ {
+  "name": "Crema de limpieza DD",
+  "price": 1875,
+  "description": "morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in",
+  "package": "1",
+  "category": "categoria-1",
+  "id": 23,
+  "image": "/images/products/dermopulidoGel.png",
+  "discount": null
+ },
+ {
+  "name": "Té verde",
+  "price": 2138,
+  "description": "pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus phasellus in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut",
+  "package": 43,
+  "category": "categoria-3",
+  "image": "/images/products/fillerDiamond.png",
+  "id": 24,
+  "discount": null
+ },
+ {
+  "name": "Leche de limpieza con Regaliz",
+  "price": 2094,
+  "description": "erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget",
+  "package": 13,
+  "category": "categoria-2",
+  "image": "/images/products/lecheLimpieza.png",
+  "id": 25,
+  "discount": null
+ },
+ {
+  "name": "Té verde",
+  "price": 1369,
+  "description": "felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis",
+  "package": 31,
+  "category": "categoria-2",
+  "image": "/images/products/serumDemaq.png",
+  "id": 26,
+  "discount": null
+ },
+ {
+  "name": "Leche de limpieza",
+  "price": 3178,
+  "description": "rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse",
+  "package": 18,
+  "category": "categoria-1",
+  "image": "/images/products/cremaOxigeno.png",
+  "id": 27,
+  "discount": null
+ },
+ {
+  "name": "Crema de limpieza",
+  "price": 1801,
+  "description": "nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris",
+  "package": 6,
+  "category": "categoria-4",
+  "image": "/images/products/fillerDiamond.png",
+  "id": 28,
+  "discount": null
+ },
+ {
+  "name": "Loción humectante y tonificante",
+  "price": 3553,
+  "description": "commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit",
+  "package": 39,
+  "category": "categoria-3",
+  "image": "/images/products/cremaLimpieza.png",
+  "id": 29,
+  "discount": null
+ },
+ {
+  "name": "Serum liposomado",
+  "price": 1752,
+  "description": "consequat dui nec nisi volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci",
+  "package": 34,
+  "category": "categoria-4",
+  "image": "/images/products/lecheLimpieza.png",
+  "id": 30,
+  "discount": null
+ },
+ {
+  "name": "Dermopulido",
+  "price": 2011,
+  "description": "justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl",
+  "package": 24,
+  "category": "categoria-4",
+  "image": "/images/products/cremaLimpieza.png",
+  "id": 31,
+  "discount": null
+ },
+ {
+  "name": "Serum liposomado",
+  "price": 4863,
+  "description": "duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas",
+  "package": 0,
+  "category": "categoria-2",
+  "image": "/images/products/retinolPlus.png",
+  "id": 32,
+  "discount": null
+ },
+ {
+  "name": "Leche de limpieza con Regaliz",
+  "price": 3743,
+  "description": "suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean",
+  "package": 38,
+  "category": "categoria-3",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 33,
+  "discount": null
+ },
+ {
+  "name": "Dermopulido",
+  "price": 1960,
+  "description": "magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl venenatis",
+  "package": 42,
+  "category": "categoria-2",
+  "image": "/images/products/retinolPlus.png",
+  "id": 34,
+  "discount": null
+ },
+ {
+  "name": "Diamond antiage",
+  "price": 4226,
+  "description": "id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt lacus at velit vivamus vel nulla eget eros elementum pellentesque quisque porta volutpat erat quisque erat eros viverra eget congue eget semper rutrum nulla nunc purus",
+  "package": 33,
+  "category": "categoria-2",
+  "image": "/images/products/fillerDiamond.png",
+  "id": 35,
+  "discount": null
+ },
+ {
+  "name": "Serum liposomado",
+  "price": 4092,
+  "description": "orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu",
+  "package": 14,
+  "category": "categoria-2",
+  "image": "/images/products/serumDemaq.png",
+  "id": 36,
+  "discount": null
+ },
+ {
+  "name": "Té verde",
+  "price": 2413,
+  "description": "vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut",
+  "package": 35,
+  "category": "categoria-1",
+  "image": "/images/products/cremaLimpieza.png",
+  "id": 37,
+  "discount": null
+ },
+ {
+  "name": "Diamond antiage",
+  "price": 3611,
+  "description": "sollicitudin mi sit amet lobortis sapien sapien non mi integer ac neque duis bibendum morbi non quam nec dui",
+  "package": 3,
+  "category": "categoria-1",
+  "image": "/images/products/lecheLimpieza.png",
+  "id": 38,
+  "discount": null
+ },
+ {
+  "name": "Té verde",
+  "price": 4396,
+  "description": "vel sem sed sagittis nam congue risus semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis",
+  "package": 23,
+  "category": "categoria-2",
+  "image": "/images/products/lecheLimpieza.png",
+  "id": 39,
+  "discount": null
+ },
+ {
+  "name": "Leche de limpieza con Regaliz",
+  "price": 1075,
+  "description": "tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum",
+  "package": 35,
+  "category": "categoria-4",
+  "image": "/images/products/lecheLimpieza.png",
+  "id": 40,
+  "discount": null
+ },
+ {
+  "name": "Serum liposomado",
+  "price": 1221,
+  "description": "sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum neque aenean auctor gravida sem praesent id massa id nisl",
+  "package": 3,
+  "category": "categoria-3",
+  "image": "/images/products/cremaLimpieza.png",
+  "id": 41,
+  "discount": null
+ },
+ {
+  "name": "Dermopulido",
+  "price": 2980,
+  "description": "mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet",
+  "package": 1,
+  "category": "categoria-1",
+  "image": "/images/products/fillerDiamond.png",
+  "id": 42,
+  "discount": null
+ },
+ {
+  "name": "Dermopulido",
+  "price": 4699,
+  "description": "gravida sem praesent id massa id nisl venenatis lacinia aenean sit amet justo morbi ut odio cras mi pede malesuada in imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris",
+  "package": 18,
+  "category": "categoria-4",
+  "image": "/images/products/lecheLimpieza.png",
+  "id": 43,
+  "discount": null
+ },
+ {
+  "name": "Loción humectante y tonificante",
+  "price": 4409,
+  "description": "ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet",
+  "package": 26,
+  "category": "categoria-4",
+  "image": "/images/products/serumDemaq.png",
+  "id": 44,
+  "discount": null
+ },
+ {
+  "name": "Leche de limpieza con Regaliz",
+  "price": 1588,
+  "description": "vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus etiam vel augue vestibulum rutrum rutrum",
+  "package": 14,
+  "category": "categoria-3",
+  "image": "/images/products/dermopulidoGel.png",
+  "id": 45,
+  "discount": null
+ },
+ {
+  "name": "Filler",
+  "price": 3857,
+  "description": "pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum",
+  "package": 44,
+  "category": "categoria-3",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 46,
+  "discount": null
+ },
+ {
+  "name": "Crema de limpieza",
+  "price": 1235,
+  "description": "luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non",
+  "package": 33,
+  "category": "categoria-4",
+  "image": "/images/products/cellularDiamond.png",
+  "id": 47,
+  "discount": null
+ },
+ {
+  "name": "Crema de limpieza",
+  "price": 2515,
+  "description": "quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante",
+  "package": 33,
+  "category": "categoria-4",
+  "image": "/images/products/serumDemaq.png",
+  "id": 48,
+  "discount": null
+ },
+ {
+  "name": "Té verde",
+  "price": 4848,
+  "description": "turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam",
+  "package": 21,
+  "category": "categoria-1",
+  "image": "/images/products/lecheLimpieza.png",
+  "id": 49,
+  "discount": null
+ },
+ {
+  "name": "Leche de limpieza con Regaliz",
+  "price": 4623,
+  "description": "sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus",
+  "package": 28,
+  "category": "categoria-3",
+  "image": "/images/products/retinolPlus.png",
+  "id": 50,
+  "discount": null
+ },
+ {
+  "name": " Nuevo Producto de prueba",
+  "price": 4050,
+  "description": "Un nuevo producto en el array mockeado",
+  "package": "50",
+  "category": "categoria-1",
+  "id": 51,
+  "image": "/images/products/product-1652538772537.png",
+  "discount": null
+ },
+ {
+  "name": "Nuevo Producto de prueba 2",
+  "price": 2345,
+  "description": "Otro ree producto para vos",
+  "package": "234",
+  "category": "categoria-4",
+  "image": "/images/products/product-1652569758005.png",
+  "id": 52,
+  "discount": null
+ },
+ {
+  "name": " Nuevo Producto 16 5",
+  "price": 2500,
+  "description": "sdfsadfsdv",
+  "package": "234",
+  "category": "categoria-2",
+  "image": "/images/products/product-1652744823417.png",
+  "id": 53,
+  "discount": null
+ },
+ {
+  "name": " la super crema",
+  "price": 2345,
+  "description": "te hace muy bien",
+  "package": "235",
+  "category": "categoria-4",
+  "image": "/images/products/product-1652823685087.png",
+  "id": 54,
+  "discount": null
+ },
+ {
+  "name": "  19-5 prod 1",
+  "price": 234234,
+  "description": "gsdgsdgvzdv",
+  "package": "235",
+  "category": "categoria-2",
+  "image": "/images/products/product-1652987853191.png",
+  "id": 55,
+  "discount": null
+ },
+ {
+  "name": "  19-5 prod 1",
+  "price": 23144,
+  "description": "sdgsdg",
+  "package": "235",
+  "category": "categoria-3",
+  "image": "/images/products/product-1652993974146.png",
+  "id": 56,
+  "discount": null
+ },
+ {
+  "name": "VICTOR TABOADA",
+  "price": 23425,
+  "description": "asdasfasfasf",
+  "package": "2134",
+  "category": "categoria-3",
+  "image": "/images/products/product-1652996455120.png",
+  "id": 57,
+  "discount": null
+ }
+]

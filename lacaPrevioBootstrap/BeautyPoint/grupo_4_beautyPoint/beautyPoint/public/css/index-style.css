@@ -1,0 +1,70 @@
+.home-main {
+  margin-top: 180px;
+  margin-bottom: 0px;
+  background-image: url("../images/bg3.png");
+}
+.home-products {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  font-style: italic;
+}
+.home-products img {
+  max-width: 60%;
+}
+.home-contenedor {
+  text-align: center;
+  max-width: 50%;
+  padding: 15px;
+  min-height: 50%;
+}
+.home-contenedor div {
+  padding: 5px;
+}
+.home-price {
+  font-weight: 800;
+  color: black;
+}
+.home-banners {
+  text-align: center;
+}
+
+.home-banners img {
+  width: 100%;
+  max-height: 400px;
+
+  object-position: top;
+}
+
+.home-banners a {
+  text-decoration: none;
+  color: black;
+}
+
+@media (min-width: 768px) {
+  .home-products img {
+    min-width: 80%;
+  }
+  .home-banners h2 {
+    font-size: xx-large;
+    color: black;
+  }
+  .home-products {
+    font-size: x-large;
+  }
+  .home-contenedor {
+     max-width: 33%;
+    padding: 5px;
+  }
+  .home-main {
+  margin-top: 150px;
+}
+}
+
+@media (min-width: 1280px) {
+  .home-contenedor {
+  max-width: 25%;
+}
+}
